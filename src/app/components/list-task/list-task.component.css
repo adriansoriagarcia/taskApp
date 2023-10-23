@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    text-align: center;
+}
+
+.input-group-prepend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-control {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group-text {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.input-group-text:hover {
+    background-color: #0056b3;
+}
+
+span{
+    width: 45px;
+    height: 25px;
+}
+
+/* Estilos para la lista de tareas */
+#list {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#list h1 {
+    color: #007bff;
+}
+
+article {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    margin-left: 5%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+span{
+    margin-left: 5%;
+}
+
+/* Media query para pantallas pequeñas*/
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-control, .input-group-text, article {
+        width: 100%;
+    }
+}
+
+
+/* Agregar borde rojo a los input que estén en estado inválido o verde si es valido*/
+
+.correct{
+outline: unset;
+border: 1px solid green;
+}
+
+.error {
+outline: unset;
+border: 1px solid red;
+}

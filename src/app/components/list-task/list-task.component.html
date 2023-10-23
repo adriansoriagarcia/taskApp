@@ -1,0 +1,30 @@
+<div class="container">
+
+    <form>
+            <div class="form-group">
+                <h1 class="text-center text-primary">Tasks App</h1>
+                
+                <div class="input-group-prepend">
+                    <input type="text" class="form-control" [ngClass]="{'correct': task.title.length > 0,'error': task.title.length === 0}" [(ngModel)]="task.title" name="title" placeholder="Title" required>
+                    <input id="prueba" type="text" class="form-control" [ngClass]="{'correct': task.description.length > 0,'error': task.description.length === 0}" [(ngModel)]="task.description" name="description" placeholder="Description" required>
+                    <span [style.visibility]="(this.button == 1) ? 'hidden' : 'visible' " class="input-group-text" (click)="this.newTask()"><i class="material-icons">add</i></span>
+                    <span [style.visibility]="(this.button == 0) ? 'hidden' : 'visible' " class="input-group-text" (click)="this.updateTask()"><i class="material-icons">edit</i></span>
+                </div>
+
+            </div>
+    </form>
+    <div id="list" class="text-center ">
+        <h1>List Task</h1>
+        <div *ngIf="! tasks.length">There are no tasks at the moment</div>
+        <div>
+            <article *ngFor="let task of tasks">
+                <span>Title: {{task.title}}</span>
+                <span>Description: {{task.description}}</span>
+                <button (click)="getItem(task.id)">Editar</button>
+                <button (click)="deleteItem(task.id)">Eliminar</button>
+                  
+            </article>
+        </div>
+    </div>
+</div>
+
